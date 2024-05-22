@@ -1,0 +1,65 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  border: 1px solid salmon;
+  min-width: 330px;
+  width: 100%;
+  height: 100%;
+}
+.calculator {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid green;
+}
+
+.screen {
+  margin: 20px auto 20px;
+  width: 327px;
+  height: 88px;
+  border: 1px solid firebrick;
+  border-radius: 10px;
+}
+
+.keypad {
+  border: 1px solid firebrick;
+  width: 327px;
+  margin: auto;
+  border-radius: 10px;
+  height: 420px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  border: 1px solid salmon;
+  box-shadow: salmon 0px 3px 3px;
+}
+.key:hover {
+  cursor: pointer;
+}
+.ac,
+.equal {
+  width: 130px;
+}
+
+.del,
+.ac {
+  background-color: seagreen;
+}
+
+.equal {
+  background-color: brown;
+}
