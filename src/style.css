@@ -7,34 +7,43 @@
 }
 
 body {
+  padding-top: 10%;
   border: 1px solid salmon;
-  min-width: 330px;
+  min-width: 375px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: #62b6cb;
 }
 .calculator {
   margin: auto;
-  width: 100%;
-  height: 100vh;
-  border: 1px solid green;
+  width: 345px;
+  height: 540px;
+  border-radius: 15px;
+  border: 1px solid #edf6f9;
+  background: #edf6f9;
+  box-shadow: rgb(194, 212, 220) 0px 3px 10px;
 }
-
 .screen {
-  margin: 20px auto 20px;
-  width: 327px;
-  height: 88px;
-  border: 1px solid firebrick;
+  margin: 20px auto 0px;
+  padding: 10px 15px;
+  text-align: end;
+  width: 280px;
+  height: 90px;
+  background: #e5f0f3;
   border-radius: 10px;
+  font-size: 32px;
+  color: #17677b;
 }
 
 .keypad {
-  border: 1px solid firebrick;
+  /* border: 1px solid firebrick; */
   width: 327px;
   margin: auto;
   border-radius: 10px;
   height: 420px;
   padding: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -42,24 +51,39 @@ body {
 .key {
   width: 60px;
   height: 60px;
-  border-radius: 5px;
-  background-color: aliceblue;
-  border: 1px solid salmon;
-  box-shadow: salmon 0px 3px 3px;
+  border-radius: 50px;
+  border: 1px solid #e5f0f3;
+  background-color: #edf6f9;
+  box-shadow: rgb(114, 207, 250) 3px 3px 5px;
+  font-size: 16px;
+  color: #62b6cb;
 }
 .key:hover {
   cursor: pointer;
+  font-size: 18px;
+  box-shadow: rgb(101, 170, 201) 3px 3px 5px;
 }
+
+/* button size */
 .ac,
 .equal {
   width: 130px;
+  border: 1px solid #e5f0f348;
 }
 
+/* button color */
 .del,
 .ac {
-  background-color: seagreen;
+  background-color: rgb(57, 76, 153);
+}
+
+.operator,
+.decimal {
+  background-color: rgb(32, 148, 183);
+  color: #e5f0f3;
+  border: 1px solid #48abc7;
 }
 
 .equal {
-  background-color: brown;
+  background-color: rgb(139, 122, 208);
 }

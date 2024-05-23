@@ -4,7 +4,6 @@ import { evaluate } from "mathjs";
 
 function App() {
   const [display, setDisplay] = useState("0"); //to display what user clicked on the screen.("0" is for test case 7)
-  const [result, setResult] = useState(""); // to save result
   const [decimal, setDecimal] = useState(false); //for checking decimal
   const [countOp, setCountOp] = useState(0);
 
@@ -48,14 +47,12 @@ function App() {
   const calculator = () => {
     try {
       const evalResult = evaluate(display, scope);
-      setResult(evalResult);
       setDisplay(evalResult);
       setDecimal(true);
       setCountOp(0);
       console.log(evaluate(display));
     } catch (error) {
-      setResult("Error in expression");
-      // setDisplay("Error");
+      setDisplay("Error in expression");
     }
   };
 
@@ -72,12 +69,11 @@ function App() {
 
   const clearHandler = () => {
     setDisplay("0");
-    setResult("");
     setDecimal(false);
     setCountOp(0);
   };
 
-  /*
+  /* previous code without mathjs
   // const [display, setDisplay] = useState(""); //to display what user clicked on the screen.
   // const [currentNum, setCurrentNum] = useState(""); // to check the number input
   // const [prevNum, setPrevNum] = useState(""); // to save the num that is already displayed
@@ -201,7 +197,7 @@ function App() {
             6
           </button>
           <button
-            className="key plus"
+            className="key operator"
             id="add"
             value="operator"
             onClick={() => {
@@ -224,7 +220,7 @@ function App() {
             3
           </button>
           <button
-            className="key subtract"
+            className="key operator"
             id="subtract"
             value="operator"
             onClick={() => {
@@ -244,7 +240,7 @@ function App() {
             0
           </button>
           <button
-            className="key divide"
+            className="key operator"
             id="divide"
             value="operator"
             onClick={() => {
@@ -254,7 +250,7 @@ function App() {
             /
           </button>
           <button
-            className="key multiply"
+            className="key operator"
             id="multiply"
             value="operator"
             onClick={() => {
