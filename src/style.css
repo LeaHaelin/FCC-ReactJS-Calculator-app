@@ -8,7 +8,6 @@
 
 body {
   padding-top: 10%;
-  border: 1px solid salmon;
   min-width: 375px;
   width: 100%;
   height: 100vh;
@@ -33,6 +32,7 @@ body {
   border-radius: 10px;
   font-size: 32px;
   color: #17677b;
+  overflow-wrap: break-word;
 }
 
 .keypad {
@@ -86,4 +86,86 @@ body {
 
 .equal {
   background-color: rgb(139, 122, 208);
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 4%;
+    min-width: 500px;
+    width: 100%;
+    height: 100vh;
+    background: #62b6cb;
+  }
+  .calculator {
+    margin: auto;
+    width: 500px;
+    height: 800px;
+    border-radius: 15px;
+    border: 1px solid #edf6f9;
+    background: #edf6f9;
+    box-shadow: rgb(194, 212, 220) 0px 3px 10px;
+  }
+  .screen {
+    margin: 20px auto 0px;
+    padding: 16px 24px;
+    text-align: end;
+    width: 440px;
+    height: 144px;
+    background: #e5f0f3;
+    border-radius: 10px;
+    font-size: 48px;
+    color: #17677b;
+  }
+
+  .keypad {
+    /* border: 1px solid firebrick; */
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .key {
+    width: 96px;
+    height: 96px;
+    border-radius: 50px;
+    border: 1px solid #e5f0f3;
+    background-color: #edf6f9;
+    box-shadow: rgb(114, 207, 250) 3px 3px 5px;
+    font-size: 24px;
+    color: #62b6cb;
+    font-weight: bold;
+  }
+
+  .key:hover {
+    font-size: 30px;
+  }
+
+  .ac,
+  .equal {
+    width: 200px;
+    border: 1px solid #e5f0f348;
+  }
+
+  /* button color */
+  .del,
+  .ac {
+    background-color: rgb(57, 76, 153);
+  }
+
+  .operator,
+  .decimal {
+    background-color: rgb(32, 148, 183);
+    color: #e5f0f3;
+    border: 1px solid #48abc7;
+  }
+
+  .equal {
+    background-color: rgb(139, 122, 208);
+  }
 }
