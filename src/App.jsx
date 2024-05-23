@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { evaluate } from "mathjs";
 
@@ -7,31 +7,26 @@ function App() {
   const [decimal, setDecimal] = useState(false); //for checking decimal
   const [countOp, setCountOp] = useState(0);
 
-  const operatorCounter = (input) => {
+  const operatorCounter = () => {
     setCountOp(countOp + 1);
-    console.log(countOp);
   };
 
   const inputHandler = (input) => {
-    // const arrDisplay = [...display];
     const operators = ["+", "-", "*", "/"];
     if (display === "0") {
       // if display is "0" or empty
       setDisplay(input);
-      console.log("first");
       setCountOp;
     } else if (operators.includes(input) && countOp <= 1) {
       // if input is one of operators, set the decimal state to false and then add the input in the display.
       setDecimal(false);
       setDisplay((prev) => prev + input);
-      console.log("second");
     } else if (input !== "-" && countOp >= 1 && operators.includes(input)) {
       setDecimal(false);
       setDisplay(display.slice(0, -countOp) + input);
     } else {
       setDisplay((prev) => prev + input);
       setCountOp(0);
-      console.log("last");
     }
   };
 
