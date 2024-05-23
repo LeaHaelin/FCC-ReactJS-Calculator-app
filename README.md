@@ -16,6 +16,6 @@ This is a calculator app, one of the projects in [freeCodeCamp](https://www.free
 
 ## Technologies Used
 
-- **React** - Frontend library
-- **JavaScript** - Logic
-- **CSS** - Styling
+- **React**
+- **CSS**
+- **[mathjs](https://www.npmjs.com/package/mathjs)**
